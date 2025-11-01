@@ -5,7 +5,7 @@ type Player = "red" | "green";
 type Edge = { v1: number; v2: number; player: Player };
 
 function App() {
-  const GRID_RADIUS = 4; // Creates a hexagon with 4 layers
+  const GRID_RADIUS = 2; // Side length 2
   const [edges, setEdges] = useState<Edge[]>([]);
   const [currentPlayer, setCurrentPlayer] = useState<Player>("red");
   const [winner, setWinner] = useState<Player | null>(null);
@@ -14,9 +14,9 @@ function App() {
   const generateVertices = () => {
     const vertices: { x: number; y: number; id: number }[] = [];
     let id = 0;
-    const SPACING = 80;
-    const centerX = 400;
-    const centerY = 350;
+    const SPACING = 120;
+    const centerX = 300;
+    const centerY = 250;
 
     for (let q = -GRID_RADIUS; q <= GRID_RADIUS; q++) {
       const r1 = Math.max(-GRID_RADIUS, -q - GRID_RADIUS);
@@ -146,10 +146,10 @@ function App() {
         <button onClick={resetGame}>Reset Game</button>
       </div>
 
-      <svg width="800" height="700">
+      <svg width="600" height="500">
         {/* Draw vertices */}
         {vertices.map((v) => (
-          <circle key={v.id} cx={v.x} cy={v.y} r="6" fill="#333" />
+          <circle key={v.id} cx={v.x} cy={v.y} r="8" fill="black" />
         ))}
 
         {/* Draw possible edges (invisible, for clicking) */}
@@ -168,12 +168,11 @@ function App() {
               x2={v2.x}
               y2={v2.y}
               stroke="rgba(200, 200, 200, 0.3)"
-              strokeWidth="3"
+              strokeWidth="12"
               style={{ cursor: winner ? "default" : "pointer" }}
               onClick={() => handleEdgeClick(edge.v1, edge.v2)}
               onMouseEnter={(e) =>
-                !winner &&
-                (e.currentTarget.style.stroke = "rgba(100, 100, 255, 0.5)")
+                !winner && (e.currentTarget.style.stroke = currentPlayer)
               }
               onMouseLeave={(e) =>
                 (e.currentTarget.style.stroke = "rgba(200, 200, 200, 0.3)")
@@ -195,7 +194,7 @@ function App() {
               x2={v2.x}
               y2={v2.y}
               stroke={edge.player}
-              strokeWidth="6"
+              strokeWidth="10"
               strokeLinecap="round"
             />
           );
