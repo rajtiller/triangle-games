@@ -1,0 +1,4 @@
+To Do:
+Remove any need for scrolling
+Make evrything white
+Make links bigger

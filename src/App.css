@@ -1,0 +1,52 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.game-info h2 {
+  margin: 0;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #646cff;
+  background: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background: #646cff;
+}
+
+svg {
+  background: white;
+  border-radius: 12px;
+}
