@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 20px;
   font-family: system-ui, -apple-system, sans-serif;
   min-height: 100vh;
   width: 100vw;
@@ -57,4 +57,40 @@ button:hover {
 svg {
   background: white;
   border-radius: 12px;
+}
+
+.game-selector {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.game-dropdown {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid black;
+  background: white;
+  color: black;
+  cursor: pointer;
+  min-width: 200px;
+}
+
+.game-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.game-select h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.game-select p {
+  font-size: 20px;
+  color: #666;
 }

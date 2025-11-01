@@ -16,7 +16,7 @@
 # git push -u origin master
 # gh repo edit --default-branch master
 # git push origin --delete main 
-# if you forget to rename $repo_name, you can run: gh repo rename NEW-REPO-NAME
+# if you forget to rename $repo_name, you can run: gh repo rename triangle-games
 # --------------------------------------------------------------------------------
 
 npm install

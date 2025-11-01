@@ -1,0 +1,41 @@
+.triangle-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.game-info h2 {
+  margin: 0;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid black;
+  background: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background: #f0f0f0;
+}
+
+svg {
+  background: white;
+  border-radius: 12px;
+}
